@@ -36,9 +36,9 @@ class HomeController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
     private var stackView = UIStackView()
     //MARK: - Properties
+    private let viewModel = ImageRecognitionViewModel()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -86,3 +86,5 @@ extension HomeController {
         ])
     }
 }
+
+
