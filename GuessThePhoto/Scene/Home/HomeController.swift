@@ -15,7 +15,7 @@ class HomeController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.heightAnchor.constraint(equalToConstant: 200).isActive = true
         image.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        image.contentMode = . scaleAspectFill
+        //image.contentMode = . scaleAspectFill
         return image
     }()
     
@@ -71,7 +71,7 @@ extension HomeController {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.spacing = 10
        // stackView.alignment = .center
         
         

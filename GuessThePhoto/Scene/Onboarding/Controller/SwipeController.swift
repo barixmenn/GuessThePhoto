@@ -69,9 +69,10 @@ class SwipeController: UICollectionViewController, UICollectionViewDelegateFlowL
         pageControl.currentPageIndicatorTintColor = .systemBlue
         pageControl.pageIndicatorTintColor = .systemGray
         
-        nextButton.setTitle("İleri", for: .normal)
+        //nextButton.setTitle("İleri", for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        nextButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
+        nextButton.tintColor = .white
+        //nextButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
                 
         bottomStackView.addArrangedSubview(previousButton)
         bottomStackView.addArrangedSubview(pageControl)
@@ -110,13 +111,13 @@ class SwipeController: UICollectionViewController, UICollectionViewDelegateFlowL
         //collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
-    @objc func nextButtonDidTap() {
-        let nextIndex = min(pageControl.currentPage + 1, swipeItems.count - 1)
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        pageControl.currentPage = nextIndex
-        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-    
+//    @objc func nextButtonDidTap() {
+//        let nextIndex = min(pageControl.currentPage + 1, swipeItems.count - 1)
+//        let indexPath = IndexPath(item: nextIndex, section: 0)
+//        pageControl.currentPage = nextIndex
+//        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//    }
+//
   
     
 }
