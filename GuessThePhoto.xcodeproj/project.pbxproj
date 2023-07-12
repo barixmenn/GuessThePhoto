@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6092D6F72A5DF8160097C124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092D6F62A5DF8160097C124 /* AppDelegate.swift */; };
 		6092D6F92A5DF8160097C124 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092D6F82A5DF8160097C124 /* SceneDelegate.swift */; };
-		6092D6FB2A5DF8160097C124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092D6FA2A5DF8160097C124 /* ViewController.swift */; };
+		6092D6FB2A5DF8160097C124 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092D6FA2A5DF8160097C124 /* HomeController.swift */; };
 		6092D7002A5DF8170097C124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6092D6FF2A5DF8170097C124 /* Assets.xcassets */; };
 		6092D7032A5DF8170097C124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6092D7012A5DF8170097C124 /* LaunchScreen.storyboard */; };
 		6092D7112A5DFE4D0097C124 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092D7102A5DFE4D0097C124 /* SwipeController.swift */; };
@@ -21,7 +21,7 @@
 		6092D6F32A5DF8160097C124 /* GuessThePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6092D6F62A5DF8160097C124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6092D6F82A5DF8160097C124 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6092D6FA2A5DF8160097C124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6092D6FA2A5DF8160097C124 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		6092D6FF2A5DF8170097C124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6092D7022A5DF8170097C124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6092D7042A5DF8170097C124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		6092D70D2A5DFE270097C124 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6092D6FA2A5DF8160097C124 /* ViewController.swift */,
+				6092D6FA2A5DF8160097C124 /* HomeController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 				6092D7112A5DFE4D0097C124 /* SwipeController.swift in Sources */,
 				6092D7152A5DFE7E0097C124 /* SwipeItem.swift in Sources */,
 				6092D7182A5DFEA00097C124 /* SwipeCell.swift in Sources */,
-				6092D6FB2A5DF8160097C124 /* ViewController.swift in Sources */,
+				6092D6FB2A5DF8160097C124 /* HomeController.swift in Sources */,
 				6092D6F72A5DF8160097C124 /* AppDelegate.swift in Sources */,
 				6092D6F92A5DF8160097C124 /* SceneDelegate.swift in Sources */,
 			);

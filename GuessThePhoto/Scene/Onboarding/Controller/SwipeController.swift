@@ -59,7 +59,7 @@ class SwipeController: UICollectionViewController, UICollectionViewDelegateFlowL
         
     //MARK: - Functions
     func configureBottomStackView() {
-        previousButton.setTitle("Geri", for: .normal)
+        previousButton.setTitle("Atla", for: .normal)
         previousButton.setTitleColor(.systemGray, for: .normal)
         previousButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         previousButton.addTarget(self, action: #selector(previousButtonDidTap), for: .touchUpInside)
@@ -102,10 +102,12 @@ class SwipeController: UICollectionViewController, UICollectionViewDelegateFlowL
     
     //MARK: - Selector
     @objc func previousButtonDidTap() {
-        let prevIndex = max(pageControl.currentPage - 1, 0)
-        let indexPath = IndexPath(item: prevIndex, section: 0)
-        pageControl.currentPage = prevIndex
-        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//        let prevIndex = max(pageControl.currentPage - 1, 0)
+//        let indexPath = IndexPath(item: prevIndex, section: 0)
+//        pageControl.currentPage = prevIndex
+        let controller = HomeController()
+        self.navigationController?.pushViewController(controller, animated: true)
+        //collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
     @objc func nextButtonDidTap() {
