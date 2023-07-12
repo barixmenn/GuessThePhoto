@@ -34,6 +34,7 @@ class HomeController: UIViewController {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(chosePhotoButtonClicked), for: .touchUpInside)
         return button
     }()
     private var stackView = UIStackView()
@@ -53,7 +54,6 @@ class HomeController: UIViewController {
         layout()
     }
     
-    //MARK: - Actions
     
 }
 
@@ -87,4 +87,45 @@ extension HomeController {
     }
 }
 
+//MARK: - Helpers
+extension HomeController {
+    private func recognizeImage(image: UIImage) {
+        infoLabel.text = "Finding..."
+        
+        viewModel.recognizeImage(image: image) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let result):
+                    let formattedResult = "\(result.confidenceLevel)% it's \(result.identifier)"
+                                        self?.infoLabel.text = formattedResult
+                    
+                case .failure(let error):
+                                  print("Error: \(error)")
+                                  self?.infoLabel.text = "Recognition failed"
+                }
+            }
+        }
+    }
+}
 
+//MARK: - Selector
+extension HomeController {
+    @objc func chosePhotoButtonClicked(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .savedPhotosAlbum
+        present(picker, animated: true)
+    }
+}
+
+
+//MARK: - UIImagePickerControllerDelegate && UINavigationControllerDelegate
+extension HomeController : UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image =  info[.originalImage] as? UIImage {
+            guessPhotoImage.image = image
+            recognizeImage(image: image)
+            self.dismiss(animated: true)
+        }
+    }
+}
